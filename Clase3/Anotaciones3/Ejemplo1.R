@@ -15,6 +15,5 @@ while(limite_superior - limite_inferior >= 1e^-8){
 	limite_superior <- punto _medio
 	}
 }
-
 # Imprimimos al estilo del lenguaje C el valor aproximado de la raíz
 sprintf("La raíz aproximada es %.8f\n", limite_superior)
