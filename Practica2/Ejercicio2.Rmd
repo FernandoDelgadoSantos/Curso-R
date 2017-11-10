@@ -1,0 +1,53 @@
+Nombre: Delgado Saantos, Kevin Fernando 20150026J
+
+Presentamos deficiones de algunas de las propiedades ás importantes de R.
+
+#### *Pregunta 2:*
+
+**Parte 1**
+
+Si una función es vectorizada en `R`, esto quiere decir que dicha función puede aceptar un vector como parámetro y al hacerlo se ejecutará sobre cada componente de dicho vector retornándonos un vector como resultados de todas las ejecuciones. 
+
+*Ejemplo*
+
+`my_matrix <- matrix(data = 1:9, nrow = 3)`
+`apply(my_matrix, 1, mean)` 
+ 
+Este ejemplo nos retorna un vector que contiene la media de cada fila, la vectorización se da pues `mean` se ejecuta sobre cada vector columna de my_matrix.
+
+
+**Parte 2**
+
+Significa que dicha función realizará operacionesaparentemente sin sentido, tales como sumar vectores de diferente longitud o elevar un vector a la potencia de un número. De manera más precisa, `R` extiende la longitud del vector más pequeño tantas veces como sea necesario para alcanzar la longitud del vector de mayor longitud. `R` opera de esta manera independientemente de si las longitudes de los vectores sean múltiplos uno del otro; sin embargo de no ser entera la división de longitudes, `R` nos proporciona un `Warning`
+
+*Ejemplo*
+
+`1:16 + 1:24`
+`# Las longitudes de los vectores son 6 y 24, por lo que R cuadriplica la longitud del vector más pequeño para realizar la suma`
+
+`1:13 + :1:5`
+`Las longitudes no son múltiplos uno del otro, por lo que R proporciona un Warning`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
